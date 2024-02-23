@@ -1,0 +1,107 @@
+.subscribe-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 250px;
+  /* border: 1px solid; */
+  padding: 20px;
+  border-radius: 20px;
+  border-top-left-radius: 190px;
+  border-top-right-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sub-bg-color);
+}
+.subscribe-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../../public/images/Group 42.png");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 200px;
+  opacity: 0.3;
+  z-index: -1;
+}
+.subscribe-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../../public/images/Group 42.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 200px;
+  opacity: 0.2; /* Adjust the value for background image opacity */
+  z-index: -1; /* Place the background image behind the content */
+}
+.sub-sender {
+  display: none;
+}
+.subscribe-container h1 {
+  max-width: 650px;
+  text-align: center;
+  color: var(--desc-1-font-color);
+  font-family: poppins;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 10px;
+}
+.subscribe-container form {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-container form div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-container form input {
+  height: 44px;
+  flex: 1;
+  width: 120%;
+  max-width: 350px;
+  padding: 10px;
+  padding-left: 40px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+}
+.sub-icon {
+  position: absolute;
+  margin-left: -420px;
+}
+.subscribe-container button {
+  width: 100px;
+  height: 33px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: #ff926a;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (width >= 900px) {
+  .sub-sender {
+    /* display: block;  impv */
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+  }
+}

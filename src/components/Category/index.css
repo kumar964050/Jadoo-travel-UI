@@ -1,0 +1,84 @@
+.category-container {
+  margin-top: 50px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category-title-1 {
+  color: var(--desc-1-font-color);
+  font-weight: 600;
+}
+.category-title-2 {
+  color: var(--title-1-font-color);
+  font-weight: 600;
+}
+.category-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.category-card {
+  width: 250px;
+  height: 180px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+.category-card img {
+  width: 50px;
+  object-fit: contain;
+  aspect-ratio: 8/8;
+}
+.category-card:nth-child(2) img {
+  width: 60px;
+}
+.category-card span {
+  color: var(--title-3-font-color);
+  margin: 5px 0;
+  font-weight: 600;
+}
+.category-card p {
+  color: var(--desc-1-font-color);
+  font-family: poppins;
+  font-size: 14px;
+  width: 160px;
+}
+
+/* gear animations */
+.category-card:nth-child(3) img {
+  animation: rotate360 3s linear infinite both;
+}
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* mic animations */
+.category-card:nth-child(1) img,
+.category-card:nth-child(4) img {
+  animation: blow 0.9s linear infinite both;
+}
+@keyframes blow {
+  100% {
+    transform: scale(0.9);
+  }
+}
+/* plan animations */
+.category-card:nth-child(2) img {
+  animation: moving 3.5s linear infinite alternate;
+}
+@keyframes moving {
+  100% {
+    transform: translateY(20px) rotate(10deg);
+  }
+}

@@ -1,0 +1,16 @@
+.company-logos-container {
+  max-width: 1200px;
+  padding: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* aspect-ratio: 6/1; */
+}
+.company-logos-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 10px;
+}

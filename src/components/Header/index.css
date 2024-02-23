@@ -1,0 +1,131 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1200px;
+
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+}
+.nav-container {
+  height: 70px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+  font-family: sans-serif;
+}
+
+.nav-title-container img {
+  width: 100px;
+  height: 30px;
+  object-fit: contain;
+}
+.menu-btn {
+  display: none;
+}
+.nav-icon {
+  font-size: 33px !important;
+}
+.nav-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
+.nav-menu-container {
+  position: absolute;
+  right: 0;
+  top: 70px;
+
+  width: 0;
+  height: 400px;
+
+  overflow: hidden;
+  background-color: var(--main-bg-color);
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  transition: width 0.3s ease;
+}
+.nav-li-item {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  display: block;
+  padding: 10px;
+  margin: 1px 0;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--title-2-font-color);
+  transition: 0.2s ease;
+}
+.nav-btn {
+  padding: 4px 10px;
+  margin: 3px 0;
+  font-size: 16px;
+}
+.nav-btn:hover {
+  color: var(--title-2-font-color);
+}
+.menu-btn:checked ~ .nav-menu-container {
+  width: 60%;
+  max-width: 330px;
+  transition: 0.2s ease width;
+}
+
+@media (width >= 800px) {
+  .menu-icon {
+    display: none;
+  }
+  .nav-menu-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    border: none;
+  }
+  .menu-btn:checked ~ .nav-menu-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .nav-link {
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 0 1px;
+  }
+  .nav-btn {
+    margin: 0px 6px;
+    padding: 3px 20px;
+  }
+}
+@media (width >= 1200px) {
+  .nav-link {
+    padding: 5px 20px;
+    margin: 0 10px;
+  }
+  .nav-btn {
+    margin: 0 20px;
+  }
+}

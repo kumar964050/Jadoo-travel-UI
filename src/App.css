@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+}
+.btn:hover {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.primary-btn {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: var(--primary-btn);
+}
+.primary-btn:hover {
+  color: var(--primary-btn);
+  background-color: transparent;
+  border: 1px solid var(--primary-btn);
+  transition: 0.2s ease background;
+}
+.secondary-btn {
+  background-color: var(--secondary-btn);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--secondary-btn);
+}
